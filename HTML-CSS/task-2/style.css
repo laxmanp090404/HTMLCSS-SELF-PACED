@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    height: fit-content;
+    cursor: pointer;
+    border: 2px solid #858585;
+    box-shadow: 0 4px 8px rgba(73, 73, 73, 0.6);
+    transition: all 0.3s ease;
+}
+
+.card img{
+    width: 50%;
+    display: block;
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+.animedetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    padding: 5px 10px 5px 10px;
+}
+.animedetails p{
+    text-align: justify;
+    font-size: larger;
+    padding: 50px 10px 50px 10px;
+}
+.animedetails h2{
+    font-size:xx-large;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(44, 255, 185, 0.6);
+    border: 2px solid #47ffda;
+}
+@media (max-width: 768px) {
+  
+  .card {
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 30%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .animedetails {
+    width: 100%;
+  }
+
+  .animedetails p {
+    padding: 20px 10px;
+    font-size: medium;
+  }
+}
