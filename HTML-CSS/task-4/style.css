@@ -1,0 +1,120 @@
+/* overall reset  */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* font setting */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu li:hover {
+    color: #2595f7;
+}
+
+/* dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: aliceblue;
+    padding: 10px;
+    width: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .submenu {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.submenu li:hover {
+    background-color: #2595f7;
+    color: white;
+}
+
+.contactbtn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #2595f7, #1862be);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.contactbtn:hover {
+    box-shadow: 0px 0px 10px #c3e3ff;
+}
+
+/* hero section styling  */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-height: calc(100vh - 80px);
+    text-align: center;
+    padding: 20px;
+}
+
+.herotext {
+    font-size: 3.5rem;
+    font-weight: 700;
+    max-width: 700px;
+}
+
+.highlight {
+    color: #2595f7;
+}
+
+.herodescription {
+    font-size: 1rem;
+    max-width: 700px;
+    font-weight: 500;
+    color: #666666;
+}
