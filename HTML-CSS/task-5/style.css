@@ -1,0 +1,90 @@
+/* overall reset  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* i used body as main container for simplicity  */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+a,
+.btn {
+  text-decoration: none;
+  background: navy;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* common overly */
+.overlay,
+.overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* modal styles  */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.close {
+  display: inline-block;
+  margin-top: 10px;
+  background: crimson;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* target method */
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal:target .modal {
+  transform: scale(1);
+}
+
+/* checkbox method */
+#toggle {
+  display: none;
+}
+
+#toggle:checked~.overlay2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+#toggle:checked~.overlay2 .modal {
+  transform: scale(1);
+}

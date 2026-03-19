@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal using CSS task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TARGET MODAL INPUT-->
+    <a href="#modal">Open Modal (Target)</a>
+
+    <!-- CHECKBOX MODAL INPUT VIA LABEL -->
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="btn">Open Modal (Checkbox)</label>
+
+    <!-- TARGET MODAL -->
+    <div id="modal" class="overlay">
+        <div class="modal">
+            <h2>Target Modal</h2>
+            <p>This is a modal using :target</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+
+    <!-- CHECKBOX MODAL -->
+    <div class="overlay2">
+        <div class="modal">
+            <h2>Checkbox Modal</h2>
+            <p>This is a modal using :checked</p>
+            <label for="toggle" class="close">Close</label>
+        </div>
+    </div>
+</body>
+
+</html>
